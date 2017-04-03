@@ -1,3 +1,4 @@
+@echo off
 :: base dir
 set BASE=%~dp0\..
 :: lib
