@@ -11,11 +11,13 @@ set LIB=%BASE%\run\lib
 
 :: clean lib
 pushd %LIB%
-del /F/S/Q . >nul
+del /F/S/Q .
 popd
 
 :: clean log dir0
-rd /S/Q %BASE%\run\log >nul
+rd /S/Q %BASE%\run\log
+
+del /F/S/Q %BASE%\*.zip
 
 pushd %SOURCE%
 mvn clean install package -Dmaven.skip.test=true
